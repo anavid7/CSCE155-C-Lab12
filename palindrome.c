@@ -25,5 +25,12 @@ int main(int argc, char **argv) {
 }
 
 int isPalindrome(const char *str, int left_index, int right_index) {
-  // TODO: implement this function as specified
+
+if (left_index >= right_index) {
+      return 1;
+    } else if (str[left_index] != str[right_index]) {
+      return 0;
+    } else if (str[left_index] == str[right_index]) {
+      int isPal = isPalindrome(str, (left_index + 1), (right_index - 1));
+  }
 }
